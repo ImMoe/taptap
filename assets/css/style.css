@@ -38,10 +38,6 @@ body {
   align-items: center;
 }
 
-.input {
-  visibility: hidden;
-}
-
 .item {
   width: 180px;
   height: 180px;
