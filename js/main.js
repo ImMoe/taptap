@@ -31,7 +31,7 @@ function randomColor() {
 
 function playSound(key) {
   let audio
-  let path = location.origin + "/assets;
+  let path = location.href + "assets/audio";
   switch (key) {
     // Key: Q
     case 113:
