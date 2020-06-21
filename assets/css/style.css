@@ -23,11 +23,11 @@ body {
 }
 
 .logo::after {
-  content: "Press any key from A-Z";
+  content: "Press any key from A-Z and turn on speakers!";
   display: block;
   font-size: 0.8rem;
   background-color: #9219A9;
-  width: 270px;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -36,6 +36,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.input {
+  visibility: hidden;
 }
 
 .item {
@@ -50,6 +54,15 @@ body {
   .item {
     width: 140px;
     height: 140px;
+  }
+  .logo::after {
+    content: "Click anywhere and type any letter from A-Z";
+    display: block;
+    font-size: 0.8rem;
+    background-color: #d46e0e;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3px;
   }
 }
 
