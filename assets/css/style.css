@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+}
+
+.logo {
+  height: 10vh;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  position: relative;
+  top: 15px;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
+
+.logo::after {
+  content: "Press any key from A-Z";
+  display: block;
+  font-size: 0.8rem;
+  background-color: #9219A9;
+  width: 270px;
+  margin: 0 auto;
+}
+
+.content {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.8) rotate(180deg);
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: scale(1.4) rotate(180deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0
+  }
+}
