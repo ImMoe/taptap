@@ -4,9 +4,6 @@ const input = document.querySelector(".input")
 
 body.addEventListener("keypress", handleKeyPress)
 
-// Open keyboard on mobile by clicking on the body
-body.addEventListener("click", () => prompt())
-
 function handleKeyPress(e) {
   toggleItem()
   playSound(e.keyCode)
