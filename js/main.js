@@ -1,7 +1,11 @@
 const body = document.body
 const item = document.querySelector(".item")
+const input = document.querySelector(".input")
 
 body.addEventListener("keypress", handleKeyPress)
+
+// Open keyboard on mobile by clicking on the body
+body.addEventListener("click", () => input.focus())
 
 function handleKeyPress(e) {
   toggleItem()
