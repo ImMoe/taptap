@@ -1,8 +1,10 @@
-const body = document.body
-const item = document.querySelector(".item")
-const input = document.querySelector(".input")
+let body, item, input
 
-body.addEventListener("keypress", handleKeyPress)
+body = document.body
+item = document.querySelector('.item')
+input = document.querySelector('.input')
+
+body.addEventListener('keypress', handleKeyPress)
 
 function handleKeyPress(e) {
   toggleItem()
@@ -12,12 +14,12 @@ function handleKeyPress(e) {
 function toggleItem() {
   const color = randomColor()
 
-  item.style.display = "block"
-  item.style.animation = "scale 1500ms ease-in"
+  item.style.display = 'block'
+  item.style.animation = 'scale 1500ms ease-in'
   item.style.backgroundColor = color
 
   setTimeout(() => {
-    item.style.display = "none"
+    item.style.display = 'none'
   }, 1200)
 }
 
@@ -29,140 +31,117 @@ function randomColor() {
   return `rgba(${red}, ${green}, ${blue}, 0.7)`
 }
 
+function Sound(name) {
+  if (!name) return new Error('There is no name defined')
+  let sound = new Audio(`${location.href}assets/audio/${name}.mp3`)
+  sound.play()
+}
+
 function playSound(key) {
-  let audio
-  let path = location.href + "assets/audio";
   switch (key) {
     // Key: Q
     case 113:
-      audio = new Audio(`${path}/bubbles.mp3`)
-      audio.play()
+      Sound('bubbles')
       break
     // Key: W
     case 119:
-      audio = new Audio(`${path}/clay.mp3`)
-      audio.play()
+      Sound('clay')
       break
     // Key: E
     case 101:
-      audio = new Audio(`${path}/confetti.mp3`)
-      audio.play()
+      Sound('confetti')
       break
     // Key: R
     case 114:
-      audio = new Audio(`${path}/dotted-spiral.mp3`)
-      audio.play()
+      Sound('dotted-spiral')
       break
     // Key: T
     case 116:
-      audio = new Audio(`${path}/flash-1.mp3`)
-      audio.play()
+      Sound('flash-1')
       break
     // Key: Y
     case 121:
-      audio = new Audio(`${path}/flash-2.mp3`)
-      audio.play()
+      Sound('flash-2')
       break
     // Key: U
     case 117:
-      audio = new Audio(`${path}/flash-3.mp3`)
-      audio.play()
+      Sound('flash-3')
       break
     // Key: I
     case 105:
-      audio = new Audio(`${path}/moon.mp3`)
-      audio.play()
+      Sound('moon')
       break
     // Key: O
     case 111:
-      audio = new Audio(`${path}/piston-1.mp3`)
-      audio.play()
+      Sound('piston-1')
       break
     // Key: P
     case 112:
-      audio = new Audio(`${path}/piston-2.mp3`)
-      audio.play()
+      Sound('piston-2')
       break
     // Key: A
     case 97:
-      audio = new Audio(`${path}/piston-3.mp3`)
-      audio.play()
+      Sound('piston-3')
       break
     // Key: S
     case 115:
-      audio = new Audio(`${path}/prism-1.mp3`)
-      audio.play()
+      Sound('prism-1')
       break
     // Key: D
     case 100:
-      audio = new Audio(`${path}/prism-2.mp3`)
-      audio.play()
+      Sound('prism-2')
       break
     // Key: F
     case 102:
-      audio = new Audio(`${path}/prism-3.mp3`)
-      audio.play()
+      Sound('prism-3')
       break
     // Key: G
     case 103:
-      audio = new Audio(`${path}/splits.mp3`)
-      audio.play()
+      Sound('splits')
       break
     // Key: H
     case 104:
-      audio = new Audio(`${path}/squiggle.mp3`)
-      audio.play()
+      Sound('squiggle')
       break
     // Key: J
     case 106:
-      audio = new Audio(`${path}/strike.mp3`)
-      audio.play()
+      Sound('strike')
       break
     // Key: K
     case 107:
-      audio = new Audio(`${path}/suspension.mp3`)
-      audio.play()
+      Sound('suspension')
       break
     // Key: l
     case 108:
-      audio = new Audio(`${path}/timer.mp3`)
-      audio.play()
+      Sound('timer')
       break
     // Key: Z
     case 122:
-      audio = new Audio(`${path}/ufo.mp3`)
-      audio.play()
+      Sound('ufo')
       break
     // Key: X
     case 120:
-      audio = new Audio(`${path}/veil.mp3`)
-      audio.play()
+      Sound('veil')
       break
     // Key: C
     case 99:
-      audio = new Audio(`${path}/wipe.mp3`)
-      audio.play()
+      Sound('wipe')
       break
     // Key: V
     case 118:
-      audio = new Audio(`${path}/zig-zag.mp3`)
-      audio.play()
+      Sound('zig-zag')
       break
     // Key: B
     case 98:
-      audio = new Audio(`${path}/pinwheel.mp3`)
-      audio.play()
+      Sound('pinwheel')
       break
     // Key: N
     case 110:
-      audio = new Audio(`${path}/corona.mp3`)
-      audio.play()
+      Sound('corona')
       break
     // Key: M
     case 109:
-      audio = new Audio(`${path}/bubbles.mp3`)
-      audio.play()
+      Sound('bubbles')
       break
   }
-
 }
