@@ -34,6 +34,7 @@ function randomColor() {
 function Sound(name) {
   if (!name) return new Error('There is no name defined')
   let sound = new Audio(`${location.href}assets/audio/${name}.mp3`)
+  sound.currentTime = 0
   sound.play()
 }
 
